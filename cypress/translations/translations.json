@@ -1,0 +1,17 @@
+{
+  "ZPAR":
+   {
+     "lblEntrada": "Recibiste 2 consultas en el último año.",
+     "btnLimpiarFiltros": "Limpiar filtros"
+    },
+  "RELA":
+  {
+    "lblEntrada": "Recibiste 2 consultas en el último año.",
+    "btnLimpiarFiltros": "Limpiar filtros"
+  },
+  "IWBR":
+    {
+      "lblEntrada": "Você recebeu 2 consultas no último ano.",
+      "btnLimpiarFiltros": "Limpar filtros"
+  }
+}

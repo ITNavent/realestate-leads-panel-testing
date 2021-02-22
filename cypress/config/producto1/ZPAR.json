@@ -1,0 +1,17 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://producto1.zonaprop.com.ar",
+  "defaultCommandTimeout": 15000,
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "env": {
+    "ENVIROMENT": "producto1",
+    "LOCALE": "ZPAR"
+  },
+  "site":
+    {
+      "loginUrl": "/login_login.ajax",
+      "usr": "producto+zpar-inmobiliaria@navent.com",
+      "pass": "Producto123"
+    }
+}

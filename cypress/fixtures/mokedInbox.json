@@ -1,0 +1,132 @@
+{
+  "total_count": 2,
+  "paging": {
+    "total": 2,
+    "offset": 0,
+    "limit": 2
+  },
+  "result": [
+    {
+      "id": "244362638",
+      "last_lead_date": "2021-02-11T14:32:55.000+00:00",
+      "lead_user": {
+        "id": "246036983",
+        "user_id": "41608731",
+        "name": "Jose Jurado",
+        "email": "jjurado@navent.com",
+        "phone": "3884971680"
+      },
+      "actions": [
+        {
+          "id": "249615958",
+          "date": "2021-02-11T14:32:54.000+00:00",
+          "type": {
+            "id": "1",
+            "description": "Envió consulta",
+            "name": "CONTACT"
+          }
+        }
+      ],
+      "contact": {
+        "email": "jose jurado <jjurado1@test.compreoalquile.com>"
+      },
+      "posting": {
+        "id": "47340305",
+        "address": "Bonifacio",
+        "location": {
+          "name": "Fortín Leyes",
+          "label": "CIUDAD",
+          "parent": {
+            "name": "Formosa ",
+            "label": "PROVINCIA",
+            "parent": {
+              "name": "Argentina",
+              "label": "PAIS"
+            }
+          }
+        },
+        "operation_type": "Venta",
+        "posting_type": "PROPERTY",
+        "price": {
+          "amount": 333,
+          "currency": "USD"
+        },
+        "pictures": {}
+      },
+      "last_message": {
+        "text": "La propiedad está disponible",
+        "date": "2021-02-11T14:35:46+0000",
+        "from": "17975493",
+        "to": "41608731",
+        "from_seeker": false,
+        "message_id": "243967546",
+        "is_comment": false
+      },
+      "contact_publisher_user_id": "78326818",
+      "statuses": [
+        "READ"
+      ]
+    },
+    {
+      "id": "244362626",
+      "last_lead_date": "2021-02-10T16:30:06.000+00:00",
+      "lead_user": {
+        "id": "246036971",
+        "user_id": "41873660",
+        "name": "Mariano Castroman",
+        "email": "mcastroman@navent.com",
+        "phone": "4444-5555"
+      },
+      "actions": [
+        {
+          "id": "249615945",
+          "date": "2021-02-10T16:30:05.000+00:00",
+          "type": {
+            "id": "1",
+            "description": "Envió consulta",
+            "name": "CONTACT"
+          }
+        }
+      ],
+      "contact": {
+        "email": "Mariano Castroman <mcastroman@navent.compreoalquile.com>"
+      },
+      "posting": {
+        "id": "47340693",
+        "address": "Bonifacio",
+        "location": {
+          "name": "Caballito",
+          "label": "BARRIO",
+          "parent": {
+            "name": "Capital Federal",
+            "label": "CIUDAD",
+            "parent": {
+              "name": "Argentina",
+              "label": "PAIS"
+            }
+          }
+        },
+        "operation_type": "Venta",
+        "posting_type": "PROPERTY",
+        "price": {
+          "amount": 100,
+          "currency": "USD"
+        },
+        "pictures": {}
+      },
+      "last_message": {
+        "text": "Este es un mensaje generado por un test automatico de Cypress",
+        "date": "2021-02-10T16:30:06+0000",
+        "from": "41873660",
+        "to": "17975493",
+        "from_seeker": true,
+        "message_id": "243967535",
+        "is_comment": false
+      },
+      "contact_publisher_user_id": "78326803",
+      "statuses": [
+        "UNREAD"
+      ]
+    }
+  ]
+}

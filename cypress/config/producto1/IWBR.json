@@ -1,0 +1,17 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://producto1.imovelweb.com.br",
+  "defaultCommandTimeout": 15000,
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "env": {
+    "ENVIROMENT": "producto1",
+    "LOCALE": "IWBR"
+  },
+  "site":
+  {
+    "loginUrl": "/login_login.ajax",
+    "usr": "producto+iwbr-inmobiliaria@navent.com",
+    "pass": "Producto123"
+  }
+}
