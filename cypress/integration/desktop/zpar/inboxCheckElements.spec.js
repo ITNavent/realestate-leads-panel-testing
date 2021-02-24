@@ -14,7 +14,7 @@ context('Navegación del panel: ' + locale, () => {
   })
 
   beforeEach(() => {
-    Cypress.Cookies.preserveOnce('sessionId', 'hashKey', 'usuarioLogeado')
+    Cypress.Cookies.preserveOnce('JSESSIONID', 'CF_Authorization', 'sessionId', 'hashKey', 'usuarioLogeado')
     cy.intercept('GET', '**/publisher/leads*limit=30*', { fixture: 'mokedInbox.json' }).as('getLeads')
     cy.intercept('GET', '**/publisher/leads*limit=1*', { fixture: 'mokedCounter.json' }).as('getCounter')
     cy.visit('/contactos.bum')

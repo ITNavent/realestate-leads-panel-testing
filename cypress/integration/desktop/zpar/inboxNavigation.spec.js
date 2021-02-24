@@ -14,12 +14,12 @@ context('Navegación del panel: ' + locale, () => {
   })
 
   beforeEach(() => {
-    Cypress.Cookies.preserveOnce('sessionId', 'hashKey', 'usuarioLogeado')
+    Cypress.Cookies.preserveOnce('JSESSIONID', 'CF_Authorization', 'sessionId', 'hashKey', 'usuarioLogeado')
     cy.intercept('GET', '**/publisher/leads*limit=30*').as('getLeads')
     cy.visit('/contactos.bum')
   })
 
-  it.skip('Check folders navigation', () => {
+  it('Check folders navigation', () => {
     cy.get('ul li:first').next().click()
     cy.wait('@getLeads')
     cy.get('ul li:last').click()
@@ -28,7 +28,7 @@ context('Navegación del panel: ' + locale, () => {
     cy.wait('@getLeads')
   })
 
-  it.skip('Check filtering options', () => {
+  it('Check filtering options', () => {
     cy.get('button').contains('Filtrar').click()
     cy.get('ul li').contains('WhatsApp').click()
     cy.contains('Aplicar').click()
@@ -39,7 +39,7 @@ context('Navegación del panel: ' + locale, () => {
     cy.contains(translations.clearFilters).click()
   })
 
-  it.skip('Check ordering options', () => {
+  it('Check ordering options', () => {
     cy.get('button').contains(translations.recent).click()
     cy.get('ul li').contains(translations.recent).siblings().contains(translations.favorites).click()
     cy.wait('@getLeads')
