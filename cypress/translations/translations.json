@@ -1,17 +1,26 @@
 {
   "ZPAR":
    {
-     "lblEntrada": "Recibiste 2 consultas en el último año.",
-     "btnLimpiarFiltros": "Limpiar filtros"
+     "resultLabel": "Recibiste 2 consultas en el último año.",
+     "clearFilters": "Limpiar filtros",
+     "recent": "Recientes",
+     "favorites": "Destacados",
+     "unreaded": "No leídos"
     },
   "RELA":
   {
-    "lblEntrada": "Recibiste 2 consultas en el último año.",
-    "btnLimpiarFiltros": "Limpiar filtros"
+    "resultLabel": "Recibiste 2 consultas en el último año.",
+    "clearFilters": "Limpiar filtros",
+    "recent": "Recientes",
+    "favorites": "Destacados",
+    "unreaded": "No leídos"
   },
   "IWBR":
     {
-      "lblEntrada": "Você recebeu 2 consultas no último ano.",
-      "btnLimpiarFiltros": "Limpar filtros"
+      "resultLabel": "Você recebeu 2 consultas no último ano.",
+      "clearFilters": "Limpar filtros",
+      "recent": "Recentes",
+      "favorites": "Com estrela",
+      "unreaded": "Não lidos"
   }
 }

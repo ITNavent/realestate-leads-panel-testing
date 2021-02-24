@@ -15,11 +15,11 @@ context('Navegación del panel: ' + locale, () => {
 
   beforeEach(() => {
     Cypress.Cookies.preserveOnce('sessionId', 'hashKey', 'usuarioLogeado')
+    cy.intercept('GET', '**/publisher/leads*limit=30*').as('getLeads')
     cy.visit('/contactos.bum')
   })
 
-  it('Check folders navigation', () => {
-    cy.intercept('GET', '**/publisher/leads*limit=30*').as('getLeads')
+  it.skip('Check folders navigation', () => {
     cy.get('ul li:first').next().click()
     cy.wait('@getLeads')
     cy.get('ul li:last').click()
@@ -28,12 +28,31 @@ context('Navegación del panel: ' + locale, () => {
     cy.wait('@getLeads')
   })
 
-  it('Check filtering options', () => {
-    cy.contains('Filtrar').click()
+  it.skip('Check filtering options', () => {
+    cy.get('button').contains('Filtrar').click()
     cy.get('ul li').contains('WhatsApp').click()
     cy.contains('Aplicar').click()
-    cy.contains(translations.btnLimpiarFiltros).click()
-    cy.get('input').type('juanmita{enter}')
-    cy.contains(translations.btnLimpiarFiltros).click()
+    cy.wait('@getLeads')
+    cy.contains(translations.clearFilters).click()
+    cy.get('input').type('navent{enter}')
+    cy.wait('@getLeads')
+    cy.contains(translations.clearFilters).click()
+  })
+
+  it.skip('Check ordering options', () => {
+    cy.get('button').contains(translations.recent).click()
+    cy.get('ul li').contains(translations.recent).siblings().contains(translations.favorites).click()
+    cy.wait('@getLeads')
+    cy.get('button').contains(translations.favorites).click()
+    cy.get('ul li').contains(translations.unreaded).click()
+    cy.wait('@getLeads')
+  })
+
+  it('Check lead details screen', () => {
+    cy.wait('@getLeads')
+    cy.get('tbody>tr').its('length').then(rows => {
+      const randomRow = Math.floor(Math.random() * (rows - 1))
+      cy.get('tbody>tr').eq(randomRow).children('td.nameColumn').click()
+    })
   })
 })

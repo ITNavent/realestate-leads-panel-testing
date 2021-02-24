@@ -21,7 +21,7 @@ context('Navegación del panel: ' + locale, () => {
   })
 
   it('Check folders navigation', () => {
-    cy.contains(translations.lblEntrada)
+    cy.contains(translations.resultLabel)
     cy.wait('@getCounter')
     cy.contains('1223233')
     cy.contains('+999')
